@@ -1,0 +1,76 @@
+@import 'colors';
+
+button {
+    background: $text-brown;
+    border: none;
+    height: 48px;
+    width: 122px;
+
+    font-family: 'Merriweather';
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 150%;
+
+    color: #FFFFFF;
+
+    .loading-icon {
+        display: inline-block;
+        width: 16px;
+        height: 16px;
+        border: 2px solid $secondary-brown;
+        border-top-color: $primary-brown;
+        border-radius: 50%;
+        animation: spin 1s infinite linear;
+    }
+
+    .stashed-icon {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+
+        &__img {
+            margin-right: 7px;
+            margin-bottom: 1px;
+        }
+    }
+
+    @keyframes spin {
+        from {
+            transform: rotate(0deg);
+        }
+
+        to {
+            transform: rotate(360deg);
+        }
+    }
+
+
+    &.in-cart {
+        background-color: $active-brown;
+    }
+
+    &:hover {
+        background: $secondary-brown;
+        cursor: pointer;
+    }
+
+    &.disabled {
+        background: $disabled-brown;
+    }
+}
+
+@media screen and (max-width: 540px) {
+
+    button {
+        height: 36px;
+        width: 122px;
+    }
+}
+
+@media screen and (max-width: 375px) {
+
+    button {
+        height: 36px;
+        width: 82px;
+    }
+}
