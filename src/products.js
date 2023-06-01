@@ -24,7 +24,7 @@ export const products = [
     },
     {
       id: 4,
-      name: '«Урок анатомии»  Рембрандт',
+      name: '«Урок анатомии» Рембрандт',
       image: '4.png',
       price: '5 000 000 $',
       active: false,

@@ -6,7 +6,7 @@
         'card': true,
         'card--disabled': !product.active
       }">
-        <img :src="getImagePath(product.image)" :alt="product.name" class="card__image">
+        <img :src="require(`../assets/cards-photos/${product.image}`)" :alt="product.name" class="card__image">
         <div class="card-text">
           <h2 class="card-text__title">{{ product.name }}</h2>
           <div v-if="product.active" class="card-text__activity">
@@ -51,12 +51,8 @@ export default {
       }
     },
   },
-  methods: {
-    getImagePath(imageName) {
-      return require(`@/assets/cards-photos/${imageName}`);
-    },
-  },
 };
+
 </script>
 
 <style lang="scss">
